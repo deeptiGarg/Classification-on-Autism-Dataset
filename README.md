@@ -10,9 +10,15 @@ Mostly discrete and numerical with a few attributes being continuous.
 
 The target class is a boolean value as YES/NO which determines if the patient is likely to have ASD or not.
 
-Though the the dataset is relatively clean, still data pre-processing is essential. 
+Though the the dataset is relatively clean, still data pre-processing is essential. - 
+1. Handling Missing Value - Predictions based on Random Forest with accuracy >70% used to fill in the missing values.
+2. Outlier/Noise Detection - Substituted with average value.
+3. Normalization - Performed normalization on continuous valued column.
+4. One hot encoding - One hot encoded(OHE) the categorical data into numerical data, which handles some of the string type values.
+5. Feature Selection - Used Random Forest to do feature engineering. Groups of similar and highly correlated feature are replaced by 1 feature.
 
-Model Building -
+
+# Model Building -
 The following different supervised machine learning algorithms are used to build and evaluate the performance of the model.
 1. Decision Trees
 2. Random Forests
@@ -20,5 +26,5 @@ The following different supervised machine learning algorithms are used to build
 4. Multi-Layer Perceptron (MLP)
 5. MLP with K-Folds
 
-
+# Results - 
 Use confusion matrix to detect false positives, true positives, false negatives and true negatives. Please check the images for the confusion matrices for 3 models in the repo files.
